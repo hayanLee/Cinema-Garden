@@ -80,3 +80,5 @@ const createMovieCard = ({ imgSrc, title, content, id ,releaseDate}) => {
 const clickCard = (e) => {
     alert(e.currentTarget.id);
 };
+
+//깃허브테스트중
