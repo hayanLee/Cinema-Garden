@@ -1,0 +1,68 @@
+/* 라이트 모드 스타일 */
+button {
+    background-color: transparent;
+    color: #333;
+    margin: 20px;
+    padding: 10px 20px;
+    border: solid 2px;
+    border-radius: 20px;
+    border-color: #8b8b8b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+.box {
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 다크 모드 스타일*/
+button.toggled {
+    background-color: #333;
+    color: #fff;
+    margin: 20px;
+    padding: 10px 20px;
+    border: solid 2px;
+    border-radius: 20px;
+    border-color: #8b8b8b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode.box {
+    background-color: #fff;
+    color: #333;
+    border: solid 2px;
+    border-radius: 5px;
+    border-color: #fff;
+}
+
+/* 아이콘 */
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-size: cover;
+}
+
+.icon {
+    background-image: url('assets/moon.svg');
+}
+
+.icon.dark-mode {
+    background-image: url('assets/sun.svg');
+}
