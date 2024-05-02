@@ -35,14 +35,20 @@ export function getMovies() {
         .then((movies) => {
             movies.forEach((movie) => {
                 // console.log(movie);
-                const {poster_path: imgSrc, title, vote_average: content, id, release_date: releaseDate } = movie;
-                createMovieCard({ imgSrc, title, content, id , releaseDate});
+                const {
+                    poster_path: imgSrc,
+                    title,
+                    vote_average: content,
+                    id,
+                    release_date: releaseDate,
+                } = movie;
+                createMovieCard({ imgSrc, title, content, id, releaseDate });
             });
         })
         .catch((err) => console.error(err));
 }
 
-const createMovieCard = ({ imgSrc, title, content, id ,releaseDate}) => {
+const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.id = id;
