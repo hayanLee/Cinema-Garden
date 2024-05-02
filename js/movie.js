@@ -34,9 +34,8 @@ export function getMovies() {
         .then((response) => response.results)
         .then((movies) => {
             movies.forEach((movie) => {
-                console.log(movie);
-                const { backdrop_path: imgSrc, title, vote_average: content, id, release_date: releaseDate } = movie;
-                // console.log(content);
+                // console.log(movie);
+                const {poster_path: imgSrc, title, vote_average: content, id, release_date: releaseDate } = movie;
                 createMovieCard({ imgSrc, title, content, id , releaseDate});
             });
         })
@@ -60,12 +59,12 @@ const createMovieCard = ({ imgSrc, title, content, id ,releaseDate}) => {
     titleElem.classList.add('movieTitle');
 
     const contentElem = document.createElement('p');
-    contentElem.textContent = content;
+    contentElem.textContent = `${content.toFixed(1)} / 10`;
     contentElem.classList.add('movieContent');
 
     const releaseDateElem = document.createElement('p');
     releaseDateElem.textContent = releaseDate;
-    releaseDateElem.classList.add('releaseDate');
+    releaseDateElem.classList.add('movieReleaseDate');
 
     card.appendChild(img);
     card.appendChild(titleElem);
@@ -80,5 +79,3 @@ const createMovieCard = ({ imgSrc, title, content, id ,releaseDate}) => {
 const clickCard = (e) => {
     alert(e.currentTarget.id);
 };
-
-//깃허브테스트중
