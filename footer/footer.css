@@ -1,0 +1,32 @@
+@import url('../css/reset.css');
+@import url('../css/style.css');
+
+:root {
+    --footer-color: #697077;
+    --white: #fff;
+}
+.footer,
+.links a {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+.footer {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--footer-color);
+}
+
+.links {
+    margin-top: 24px;
+}
+
+.links a {
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+}
