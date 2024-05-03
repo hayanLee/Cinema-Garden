@@ -9,8 +9,7 @@
 .header {
     width: 100vw;
     max-width: 100%;
-    height: 600px;
-    background-color: tomato;
+    height: 700px;
 }
 .header__head {
     height: 80px;
@@ -20,11 +19,10 @@
     align-items: center;
     justify-content: space-evenly;
     margin: 1rem 0;
+    z-index: 10;
 }
 .header__head > .title {
-    /* position: fixed; */
     color: pink;
-    /* margin: 50px; */
     font-size: 24px;
     letter-spacing: 0.3rem;
     font-weight: bold;
@@ -37,7 +35,7 @@
 .header__main {
     height: 100%;
     width: 100%;
-    background-image: url('https://images.unsplash.com/photo-1714508862788-44e45c4315d0?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    /* background-image: url('https://images.unsplash.com/photo-1714508862788-44e45c4315d0?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
     background-size: cover;
 }
 
@@ -78,7 +76,35 @@
     filter: brightness(-20%);
 }
 
-/* animation */
-.hide {
-    top: -100px;
+/* swiper */
+.swiper-slide {
+    width: 100%;
+}
+.contentWrapper {
+    width: 500px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: var(--white);
+}
+.movieImg {
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+.movieTitle {
+    font-size: 3rem;
+}
+.movieReleaseDate,
+.review {
+    display: inline-block;
+    font-size: 1rem;
+}
+.review {
+    margin-left: 20px;
+}
+.movieContent {
+    font-size: 1rem;
+    margin-top: 10px;
 }
