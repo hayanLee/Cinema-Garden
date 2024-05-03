@@ -49,6 +49,8 @@ button:active {
   position: absolute;
   top: 80px;
   left: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .movie-contents {
   width: 700px;
@@ -73,4 +75,8 @@ button:active {
   position: absolute;
   top: 40px;
   left: 40px;
+}
+
+.movie-title {
+  font-size: 25px;
 }
