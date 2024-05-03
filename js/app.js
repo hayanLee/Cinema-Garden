@@ -1,11 +1,11 @@
-import { getMovies } from './movie.js';
+import { printMovieCard } from './movie.js';
 import { handleForm } from './search.js';
 const $searchForm = document.querySelector('.searchForm');
 const $input = document.querySelector('.searchForm__input');
 const $header = document.querySelector('.header > h1');
 const $uptoBtn = document.querySelector('.uptoBtn');
 
-getMovies(); // movie module
+printMovieCard(); // movie module
 
 document.addEventListener('DOMContentLoaded', () => $input.focus());
 $header.addEventListener('click', () => {

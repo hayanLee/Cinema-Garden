@@ -13,15 +13,14 @@
 body {
     /* width: 100dvw;
     height: 100dvh; */
-    background-image: url('../assets/background.jpg');
     background-size: cover;
-    /* background: rgb(58, 56, 105);
+    background: rgb(58, 56, 105);
     background: linear-gradient(
         90deg,
         rgba(58, 56, 105, 1) 25%,
         rgba(56, 176, 204, 0.7119441526610644) 67%,
         rgba(255, 0, 0, 0.821187850140056) 97%
-    ); */
+    );
 }
 .container {
     display: flex;
@@ -31,24 +30,7 @@ body {
     margin: 0 20pz;
     /* overflow-x: hidden; */
 }
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header > h1 {
-    color: var(--white);
-    margin: 50px;
-    font-size: 3.5rem;
-    letter-spacing: 0.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.header > h1:hover {
-    color: var(--main-color);
-}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -56,35 +38,24 @@ body {
     align-items: center;
     width: 100%;
 }
-.searchForm {
+
+.mainInner {
+    width: 100%;
     display: flex;
+}
+.sortValue {
+    width: 15%;
+    height: 300px;
+    background-color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-bottom: 3rem;
-    width: 60%;
+    /* align-items: center; */
 }
-.searchForm__input,
-.searchForm__btn {
-    font-size: 1.5rem;
-    padding: 15px;
-    border: none;
+.sortValue > form {
+    margin-left: 10px;
 }
-.searchForm__input {
-    border-top-left-radius: 1.2rem;
-    border-bottom-left-radius: 1.2rem;
-    flex: 1;
-}
-.searchForm__input:focus-visible {
-    outline-color: var(--main-color);
-}
-.searchForm__btn {
-    border-top-right-radius: 1.2rem;
-    border-bottom-right-radius: 1.2rem;
-    width: 20%;
-    background-color: var(--main-color);
-}
-.searchForm__btn:hover {
-    filter: brightness(125%);
-}
+
 .mainInner{
     width: 100%;
     display: flex;
@@ -102,6 +73,7 @@ body {
 .sortValue > form{
   margin-left: 10px;
 }
+
 /* card */
 .cardContainer {
     padding: 1rem 0 1rem 0;
