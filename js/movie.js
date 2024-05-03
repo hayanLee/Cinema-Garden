@@ -22,11 +22,12 @@ const $cardContainer = document.querySelector('.cardContainer');
 
 // 영화 데이터만 가져옴 (mockData)
 async function fetchMovies() {
-    const response = await fetch('./assets/popularMovies.json');
+    const response = await fetch('./assets/popularMovies.json'); // main index
+    // const response = await fetch('../assets/popularMovies.json'); // header 확인하려면 이거로 하시면 됩니다
     const { results } = await response.json();
     return results;
 }
-
+fetchMovies();
 // 영화(array) 가져와서 html에 뿌려주기
 export async function printMovieCard() {
     try {
@@ -41,7 +42,6 @@ export async function printMovieCard() {
             } = movie;
             createMovieCard({ imgSrc, title, content, id, releaseDate });
         });
-        console.log(movies);
     } catch (e) {
         console.log('error of createMovieCard : ', e);
     }
