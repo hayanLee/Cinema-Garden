@@ -1,0 +1,84 @@
+@import url('../css/reset.css');
+@import url('../css/style.css');
+
+:root {
+    --border-color: #d1d5db;
+    --white: #fff;
+}
+
+.header {
+    width: 100vw;
+    max-width: 100%;
+    height: 600px;
+    margin: 1.5rem 0;
+    /* background-color: tomato; */
+}
+.header__head {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header__head > .title {
+    /* position: fixed; */
+    color: pink;
+    /* margin: 50px; */
+    font-size: 24px;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.header__head > .title:hover {
+    color: var(--main-color);
+}
+
+/* darkmode */
+.darkmode {
+}
+
+/* search */
+.searchForm {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.searchForm__input,
+.searchForm__icon {
+    font-size: 1rem;
+    color: var(--white);
+}
+.searchForm__input {
+    border: none;
+    flex: 1;
+    padding-left: 15px;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 6px 10px;
+    border: 2px solid var(--border-color);
+}
+.searchForm__input::placeholder {
+    color: var(--white);
+}
+.searchForm__input:focus-visible {
+    outline-color: var(--main-color);
+}
+.searchForm__icon {
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+.searchForm__icon:hover {
+    filter: brightness(-20%);
+}
+
+/* header main */
+.header__movie {
+}
+.header__movie > .movieTitle {
+}
+.heaer__movie > .movieContent {
+}

@@ -21,4 +21,3 @@ if (body.classList.contains('dark-mode')) {
 
 // 클릭시 다크모드 혹은 라이트모드로 적용
 darkModeToggle.addEventListener('click', toggleDarkMode);
-
