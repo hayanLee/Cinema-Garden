@@ -41,6 +41,7 @@ export async function printMovieCard() {
             } = movie;
             createMovieCard({ imgSrc, title, content, id, releaseDate });
         });
+        console.log(movies);
     } catch (e) {
         console.log('error of createMovieCard : ', e);
     }
