@@ -18,9 +18,8 @@ export function handleForm(e) {
         else card.style.display = 'none';
     });
     console.log(getFilterResult());
-    // console.log(filterResults);
 }
-export function getFilterResult(){
+function getFilterResult(){
     return filterResults;
 }
 
