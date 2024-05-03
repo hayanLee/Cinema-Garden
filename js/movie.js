@@ -10,41 +10,53 @@ const $cardContainer = document.querySelector('.cardContainer');
 //     },
 // };
 
-// API
-// export function getMovies() {
-//     return fetch(
+// 영화 데이터만 가져옴 (API)
+// export async function fetchMovies() {
+//     const response = await fetch(
 //         'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
 //         options
-//     )
-//         .then((response) => response.json())
-//         .then((res) => res.results)
-//         .then((movies) => {
-//             movies.forEach((movie) => {
-//                 const { backdrop_path: imgSrc, title, overview: content, id } = movie;
-//                 createMovieCard(imgSrc, title, content, id);
-//             });
-//         })
-//         .catch((err) => console.error(err));
+//     );
+//     const { results } = await response.json();
+//     return results;
 // }
 
-// mockData
-export function getMovies() {
-    return fetch('./assets/popularMovies.json')
-        .then((response) => response.json())
-        .then((response) => response.results)
-        .then((movies) => {
-            movies.forEach((movie) => {
-                // console.log(movie);
-
-                const {poster_path: imgSrc, title, vote_average: content, id, release_date: releaseDate } = movie;
-                createMovieCard({ imgSrc, title, content, id , releaseDate});
-            });
-        })
-        .catch((err) => console.error(err));
+// 영화 데이터만 가져옴 (mockData)
+async function fetchMovies() {
+    const response = await fetch('./assets/popularMovies.json');
+    const { results } = await response.json();
+    return results;
 }
 
+// 영화(array) 가져와서 html에 뿌려주기
+export async function printMovieCard() {
+    try {
+        const movies = await fetchMovies(); // array(20)
+        movies.forEach((movie) => {
+            const {
+                poster_path: imgSrc,
+                title,
+                vote_average: content,
+                id,
+                release_date: releaseDate,
+            } = movie;
+            createMovieCard({ imgSrc, title, content, id, releaseDate });
+        });
+    } catch (e) {
+        console.log('error of createMovieCard : ', e);
+    }
+}
 
-const createMovieCard = ({ imgSrc, title, content, id ,releaseDate}) => {
+// header에 사용할 최신 영화 5가지
+export async function getTopFiveMovie() {
+    try {
+        const movies = await fetchMovies();
+        return movies.slice(0, 5);
+    } catch (e) {
+        console.log('error of getTopFiveMovie :', e);
+    }
+}
+
+const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.id = id;
@@ -79,5 +91,6 @@ const createMovieCard = ({ imgSrc, title, content, id ,releaseDate}) => {
 };
 
 const clickCard = (e) => {
+    console.log(e);
     alert(e.currentTarget.id);
 };
