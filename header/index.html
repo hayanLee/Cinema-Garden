@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="header.css">
+    <!-- swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./header.js"></script>
 </head>
 
 <body>
@@ -19,12 +23,11 @@
             </form>
             <button class="darkmode">☀️</button>
         </section>
-        <section class="header__main">
-            <!-- <h2 class="movieTitle">영화 제목</h2>
-            <p class="movieContent">영화 내용</p> -->
-        </section>
+        <div class="header__main swiper-container">
+            <div class="swiper-wrapper"></div>
+        </div>
     </header>
-    <div style="height: 1000px;">높이 테스트용</div>
+    <main style="height: 1000px;">높이 테스트용</main>
 </body>
 
 </html>
