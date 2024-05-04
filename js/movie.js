@@ -21,7 +21,7 @@ const $cardContainer = document.querySelector('.cardContainer');
 // }
 
 // 영화 데이터만 가져옴 (mockData)
-export async function fetchMovies() {
+async function fetchMovies() {
     const response = await fetch('./assets/popularMovies.json');
     const { results } = await response.json();
     return results;
