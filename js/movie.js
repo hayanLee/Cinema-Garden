@@ -21,7 +21,7 @@ const $cardContainer = document.querySelector('.cardContainer');
 // }
 
 // 영화 데이터만 가져옴 (mockData)
-async function fetchMovies() {
+export async function fetchMovies() {
     const response = await fetch('./assets/popularMovies.json');
     const { results } = await response.json();
     return results;
@@ -38,10 +38,11 @@ export async function printMovieCard() {
                 vote_average: content,
                 id,
                 release_date: releaseDate,
+                popularity,
             } = movie;
-            createMovieCard({ imgSrc, title, content, id, releaseDate });
+            createMovieCard({ imgSrc, title, content, id, releaseDate, popularity});
+            // console.log(movie);
         });
-        console.log(movies);
     } catch (e) {
         console.log('error of createMovieCard : ', e);
     }
@@ -57,7 +58,7 @@ export async function getTopFiveMovie() {
     }
 }
 
-const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
+const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity}) => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.id = id;
@@ -81,10 +82,16 @@ const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
     releaseDateElem.textContent = releaseDate;
     releaseDateElem.classList.add('movieReleaseDate');
 
+    const popularityElem = document.createElement('p');
+    popularityElem.textContent = popularity;
+    popularityElem.classList.add('popularity');
+    popularityElem.style.display = "none";
+
     card.appendChild(img);
     card.appendChild(titleElem);
     card.appendChild(contentElem);
     card.appendChild(releaseDateElem);
+    card.appendChild(popularityElem);
 
     $cardContainer.appendChild(card);
 
