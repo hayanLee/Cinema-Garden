@@ -43,7 +43,7 @@ export async function printMovieCard() {
                 release_date: releaseDate,
                 popularity,
             } = movie;
-            createMovieCard({ imgSrc, title, content, id, releaseDate, popularity});
+            createMovieCard({ imgSrc, title, content, id, releaseDate, popularity });
         });
     } catch (e) {
         console.log('error of createMovieCard : ', e);
@@ -60,7 +60,7 @@ export async function getTopFiveMovie() {
     }
 }
 
-const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity}) => {
+const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity }) => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.id = id;
@@ -87,7 +87,7 @@ const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity})
     const popularityElem = document.createElement('p');
     popularityElem.textContent = popularity;
     popularityElem.classList.add('popularity');
-    popularityElem.style.display = "none";
+    popularityElem.style.display = 'none';
 
     card.appendChild(img);
     card.appendChild(titleElem);
@@ -99,46 +99,6 @@ const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity})
     $main_cards.appendChild(card);
 
     card.addEventListener('click', clickCard); // 이벤트 버블링
-};
-
-// 개봉예정 영화 영상
-async function getUpcommingVideoIDs() {
-    // const response = await fetch(
-    //     `https://api.themoviedb.org/3/movie/upcoming?language=ko&page=1`,
-    //     options
-    // );
-    const response = await fetch('../assets/upcomming.json');
-    const { results } = await response.json();
-    const videoIDs = results.map((video) => video.id);
-    return videoIDs;
-}
-
-async function getMovieVideos(movieId) {
-    const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${movieId}/videos?language=ko`,
-        options
-    );
-    const { results } = await response.json();
-    const teaser = results.filter(
-        (data) => data.type === 'Teaser' || data.type === 'Trailer'
-    );
-
-    if (teaser.length > 0) {
-        // console.log(teaser[teaser.length - 1]);
-        createVideoCard(teaser[teaser.length - 1].key);
-    }
-}
-
-const videoIDs = getUpcommingVideoIDs(); // 비디오 아이디 배열
-videoIDs.then((arr) => {
-    arr.forEach((movieId) => getMovieVideos(movieId));
-});
-
-const createVideoCard = (videoId) => {
-    const videoCard = document.createElement('iframe');
-    videoCard.src = `https://www.youtube.com/embed/${videoId}`;
-    videoCard.classList.add('videoCard');
-    $videos.appendChild(videoCard);
 };
 
 const clickCard = (e) => {
