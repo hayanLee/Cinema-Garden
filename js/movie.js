@@ -1,7 +1,6 @@
 //영화 정보를 가져와서 ui에 리스팅
 // const $cardContainer = document.querySelector('.cardContainer');
 const $main_cards = document.querySelector('.main__cards');
-const $videos = document.querySelector('.videos');
 
 const options = {
     method: 'GET',
