@@ -1,5 +1,5 @@
 //영화 정보를 가져와서 ui에 리스팅
-const $cardContainer = document.querySelector('.cardContainer');
+// const $cardContainer = document.querySelector('.cardContainer');
 const $main_cards = document.querySelector('.main__cards');
 
 // const options = {
@@ -87,7 +87,7 @@ const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
     card.appendChild(review);
     card.appendChild(releaseDateElem);
 
-    $cardContainer.appendChild(card);
+    // $cardContainer.appendChild(card);
     $main_cards.appendChild(card);
 
     card.addEventListener('click', clickCard); // 이벤트 버블링
