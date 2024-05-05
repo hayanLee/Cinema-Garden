@@ -89,7 +89,7 @@ button:active {
   font-size: 35px;
   margin-left: 39%;
   border-bottom: 1px solid #999;
-  margin-top: 16px;
+  margin-top: 5px;
   padding: 20px 0;
   width: 160px;
   font-family: "Pretendard-Regular";
@@ -98,10 +98,10 @@ button:active {
 
 .movie-info2 {
   margin-left: 35px;
-  margin-top: 35px;
+  margin-top: 38px;
 }
 .movie-info2 > p {
   line-height: 95px;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Pretendard-Regular";
 }
