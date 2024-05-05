@@ -63,7 +63,7 @@ button:active {
 .movie-contents {
   width: 700px;
   height: 500px;
-  background-color: #b3c8cf;
+  /* background-color: #b3c8cf; */
   position: absolute;
   top: 80px;
   right: 100px;
@@ -101,7 +101,7 @@ button:active {
   margin-top: 35px;
 }
 .movie-info2 > p {
-  line-height: 50px;
-  font-size: 19px;
+  line-height: 95px;
+  font-size: 20px;
   font-family: "Pretendard-Regular";
 }
