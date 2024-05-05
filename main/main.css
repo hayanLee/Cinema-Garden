@@ -1,0 +1,69 @@
+@import url('../css/reset.css');
+@import url('../css/style.css');
+@import url('../header/header.css');
+
+.main__container {
+    height: 1000px;
+    background-color: wheat;
+    margin: 0 50px;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: 15% auto;
+    background-color: pink;
+}
+.main__filters {
+    background-color: white;
+}
+/* 카드 */
+.main__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 20px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 1.2rem;
+    /* width: 300px; */
+    width: 80%;
+    height: 100%;
+    padding: 0.5rem;
+    margin: 0 auto;
+    box-shadow: 10px 9px 20px -1px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: 10px 9px 20px -1px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 10px 9px 20px -1px rgba(0, 0, 0, 0.51);
+}
+.movieImg {
+    width: 100%;
+    height: 80%;
+    border-radius: 1.2rem;
+    object-fit: cover;
+}
+.movieTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--accent-color);
+    text-overflow: ellipsis;
+}
+.review {
+    color: var(--main-color);
+    margin-top: 5px;
+}
+.movieReleaseDate {
+    margin-top: auto;
+}
+.videos {
+    height: 500px;
+    background-color: green;
+}
+.actors {
+    height: 500px;
+    background-color: aqua;
+}

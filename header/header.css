@@ -87,24 +87,32 @@
     left: 5%;
     color: var(--white);
 }
-.movieImg {
-    position: relative;
+.header__movieImg {
+    width: 100%;
     height: 100%;
+    position: relative;
     object-fit: cover;
     border-radius: 0;
 }
-.movieTitle {
+.header__movieTitle {
+    margin: 1rem 0;
     font-size: 3rem;
+    text-shadow: 1px 1px 2px var(--main-color);
 }
-.movieReleaseDate,
-.review {
-    display: inline-block;
-    font-size: 1rem;
-}
-.review {
-    margin-left: 20px;
-}
-.movieContent {
+.header__movieContent {
+    display: -webkit-box;
     font-size: 1rem;
     margin-top: 10px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.header__movieReleaseDate,
+.header__review {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+.header__review {
+    margin-left: 20px;
 }

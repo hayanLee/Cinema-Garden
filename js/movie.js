@@ -1,5 +1,6 @@
 //영화 정보를 가져와서 ui에 리스팅
-const $cardContainer = document.querySelector('.cardContainer');
+// const $cardContainer = document.querySelector('.cardContainer');
+const $main_cards = document.querySelector('.main__cards');
 
 // const options = {
 //     method: 'GET',
@@ -22,13 +23,13 @@ const $cardContainer = document.querySelector('.cardContainer');
 
 // 영화 데이터만 가져옴 (mockData)
 async function fetchMovies() {
-    const response = await fetch('./assets/popularMovies.json'); // main index
-    // const response = await fetch('../assets/popularMovies.json'); // header 확인하려면 이거로 하시면 됩니다
+    // const response = await fetch('./assets/popularMovies.json'); // main index
+    const response = await fetch('../assets/popularMovies.json'); // header 확인하려면 이거로 하시면 됩니다
     const { results } = await response.json();
     return results;
 }
-fetchMovies();
 // 영화(array) 가져와서 html에 뿌려주기
+
 export async function printMovieCard() {
     try {
         const movies = await fetchMovies(); // array(20)
@@ -39,10 +40,8 @@ export async function printMovieCard() {
                 vote_average: content,
                 id,
                 release_date: releaseDate,
-                popularity,
             } = movie;
-            createMovieCard({ imgSrc, title, content, id, releaseDate, popularity});
-            // console.log(movie);
+            createMovieCard({ imgSrc, title, content, id, releaseDate });
         });
     } catch (e) {
         console.log('error of createMovieCard : ', e);
@@ -59,7 +58,7 @@ export async function getTopFiveMovie() {
     }
 }
 
-const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity}) => {
+const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.id = id;
@@ -75,31 +74,26 @@ const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity})
     titleElem.textContent = title;
     titleElem.classList.add('movieTitle');
 
-    const contentElem = document.createElement('p');
-    contentElem.textContent = `${content.toFixed(1)} / 10`;
-    contentElem.classList.add('movieContent');
+    const review = document.createElement('p');
+    review.textContent = `⭐️ ${content.toFixed(1)} / 10`;
+    review.classList.add('review');
 
     const releaseDateElem = document.createElement('p');
     releaseDateElem.textContent = releaseDate;
     releaseDateElem.classList.add('movieReleaseDate');
 
-    const popularityElem = document.createElement('p');
-    popularityElem.textContent = popularity;
-    popularityElem.classList.add('popularity');
-    popularityElem.style.display = "none";
-
     card.appendChild(img);
     card.appendChild(titleElem);
-    card.appendChild(contentElem);
+    card.appendChild(review);
     card.appendChild(releaseDateElem);
-    card.appendChild(popularityElem);
 
-    $cardContainer.appendChild(card);
+    // $cardContainer.appendChild(card);
+    $main_cards.appendChild(card);
 
     card.addEventListener('click', clickCard); // 이벤트 버블링
 };
 
 const clickCard = (e) => {
-    console.log(e);
+    //카드 이벤트
     alert(e.currentTarget.id);
 };
