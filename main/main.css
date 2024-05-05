@@ -84,10 +84,35 @@
 .movieReleaseDate {
     margin-top: auto;
 }
+
+/* 개봉예정 작품 */
 .videos {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 50px 0;
+    padding: 0 50px;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 50px;
     height: 500px;
     background-color: green;
+    position: relative;
 }
+
+.title {
+    position: absolute;
+    top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.videoCard {
+    min-width: 600px;
+    height: 80%;
+}
+
+/* 배우 */
 .actors {
     height: 500px;
     background-color: aqua;
