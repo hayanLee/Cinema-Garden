@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="../header/header.js"></script>
+    <script type="module" src="./main.js"></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <section class="header__head">
+            <h1 class="title">Jo's Cinema Garden</h1>
+            <form class="searchForm">
+                <input class="searchForm__input" type="text" placeholder="What do you want to watch?">
+                <div class="searchForm__icon"><img src="../assets/Search.png" alt="돋보기아이콘"></div>
+            </form>
+            <button class="darkmode">☀️</button>
+        </section>
+        <div class="header__main swiper-container">
+            <div class="swiper-wrapper"></div>
+        </div>
+    </header>
+
+    <!-- 메인 -->
+    <main>
+        <div class="main__container">
+            <div class="movies">
+                <aside class="main__filters">
+                    <form class="sortForm">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioDefaultFirst"
+                                id="RadioDefaultFirst1" checked>
+                            <label class="form-check-label" for="RadioDefaultFirst1">
+                                인기순
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioDefaultFirst"
+                                id="RadioDefaultFirst2">
+                            <label class="form-check-label" for="RadioDefaultFirst2">
+                                평점순
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioDefaultFirst"
+                                id="RadioDefaultFirst3">
+                            <label class="form-check-label" for="RadioDefaultFirst3">
+                                이름순
+                            </label>
+                        </div>
+                    </form>
+                    <form class="yearForm">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioDefaultSecond"
+                                id="RadioDefaultSecond1" checked>
+                            <label class="form-check-label" for="RadioDefaultSecond1">
+                                All movies
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioDefaultSecond"
+                                id="RadioDefaultSecond2">
+                            <label class="form-check-label" for="RadioDefaultSecond2">
+                                2024 ~ 2023
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioDefaultSecond"
+                                id="RadioDefaultSecond3">
+                            <label class="form-check-label" for="RadioDefaultSecond3">
+                                2023 ~ 2022
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="RadioDefaultSecond"
+                                id="RadioDefaultSecond4">
+                            <label class="form-check-label" for="RadioDefaultSecond4">
+                                Before 2022
+                            </label>
+                        </div>
+                    </form>
+                </aside>
+                <div class="main__cards"></div>
+            </div>
+            <div class="videos">
+                movies
+            </div>
+            <div class="actors">
+                actors
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

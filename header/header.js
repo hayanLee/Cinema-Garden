@@ -39,7 +39,7 @@ const createMovieBanner = ({ imgSrc, title, id, content, review, release }) => {
     const img = document.createElement('img');
     img.src = `https://image.tmdb.org/t/p/original/${imgSrc}`;
     img.alt = '영화이미지';
-    img.classList.add('movieImg');
+    img.classList.add('header__movieImg');
 
     // 이미지 제외 담기
     const contentWrapper = document.createElement('div');
@@ -47,19 +47,19 @@ const createMovieBanner = ({ imgSrc, title, id, content, review, release }) => {
 
     const titleElem = document.createElement('h2');
     titleElem.textContent = title;
-    titleElem.classList.add('movieTitle');
+    titleElem.classList.add('header__movieTitle');
 
     const reviewElem = document.createElement('p');
     reviewElem.textContent = `⭐️ ${review.toFixed(1)} / 10`;
-    reviewElem.classList.add('review');
+    reviewElem.classList.add('header__review');
 
     const contentElem = document.createElement('p');
     contentElem.textContent = content;
-    contentElem.classList.add('movieContent');
+    contentElem.classList.add('header__movieContent');
 
     const releaseDateElem = document.createElement('p');
     releaseDateElem.textContent = release;
-    releaseDateElem.classList.add('movieReleaseDate');
+    releaseDateElem.classList.add('header__movieReleaseDate');
 
     slide.appendChild(img);
 
