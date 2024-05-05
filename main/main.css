@@ -15,9 +15,34 @@
     grid-template-columns: 15% auto;
     background-color: pink;
 }
+
+/* 필터 */
 .main__filters {
-    background-color: white;
+    background-color: var(--white);
 }
+.sortForm,
+.yearForm {
+    margin: 20px;
+    font-size: 1rem;
+}
+.sortForm::before,
+.yearForm::before {
+    display: block;
+    font-size: 1.2rem;
+    background-color: var(--main-color);
+    padding: 5px;
+}
+.sortForm::before {
+    content: 'Sorting';
+}
+.yearForm::before {
+    content: 'Years';
+}
+.form-check {
+    font-size: 1rem;
+    margin: 10px;
+}
+
 /* 카드 */
 .main__cards {
     display: grid;
