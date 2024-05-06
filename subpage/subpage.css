@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url("https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -104,4 +106,29 @@ button:active {
   line-height: 95px;
   font-size: 25px;
   font-family: "Pretendard-Regular";
+}
+
+.etc {
+  margin-top: 30px;
+  margin-left: 5%;
+}
+
+.like {
+  border: none;
+  background-color: #ca8787;
+  font-size: 17px;
+  color: #f2f2f2;
+  font-family: "Pretendard-Regular";
+  border-radius: 10px;
+  width: 120px;
+  height: 45px;
+}
+
+.fi fi-rr-heart {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.etc :hover {
+  cursor: pointer;
 }
