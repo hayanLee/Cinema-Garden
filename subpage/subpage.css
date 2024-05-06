@@ -131,4 +131,5 @@ button:active {
 
 .etc :hover {
   cursor: pointer;
+  opacity: 0.7;
 }
