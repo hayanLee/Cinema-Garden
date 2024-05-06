@@ -2,14 +2,14 @@
 // const $cardContainer = document.querySelector('.cardContainer');
 const $main_cards = document.querySelector('.main__cards');
 
-// const options = {
-//     method: 'GET',
-//     headers: {
-//         accept: 'application/json',
-//         Authorization:
-//             'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NWNmOGYwMTA4YjcwODA3NDI0YWVhZjFkMDExMGY2NSIsInN1YiI6IjYyNTdiZjFmZDZkYmJhMDA5OGM0MGFlZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ee2ocg2kilfxcTv_uW6jbBUliMHyw6f59mBKiBICEx8',
-//     },
-// };
+const options = {
+    method: 'GET',
+    headers: {
+        accept: 'application/json',
+        Authorization:
+            'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NWNmOGYwMTA4YjcwODA3NDI0YWVhZjFkMDExMGY2NSIsInN1YiI6IjYyNTdiZjFmZDZkYmJhMDA5OGM0MGFlZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ee2ocg2kilfxcTv_uW6jbBUliMHyw6f59mBKiBICEx8',
+    },
+};
 
 // 영화 데이터만 가져옴 (API)
 // export async function fetchMovies() {
@@ -28,8 +28,8 @@ async function fetchMovies() {
     const { results } = await response.json();
     return results;
 }
-// 영화(array) 가져와서 html에 뿌려주기
 
+// 영화(array) 가져와서 html에 뿌려주기
 export async function printMovieCard() {
     try {
         const movies = await fetchMovies(); // array(20)
@@ -40,8 +40,9 @@ export async function printMovieCard() {
                 vote_average: content,
                 id,
                 release_date: releaseDate,
+                popularity,
             } = movie;
-            createMovieCard({ imgSrc, title, content, id, releaseDate });
+            createMovieCard({ imgSrc, title, content, id, releaseDate, popularity });
         });
     } catch (e) {
         console.log('error of createMovieCard : ', e);
@@ -58,7 +59,7 @@ export async function getTopFiveMovie() {
     }
 }
 
-const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
+const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity }) => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.id = id;
@@ -82,10 +83,16 @@ const createMovieCard = ({ imgSrc, title, content, id, releaseDate }) => {
     releaseDateElem.textContent = releaseDate;
     releaseDateElem.classList.add('movieReleaseDate');
 
+    const popularityElem = document.createElement('p');
+    popularityElem.textContent = popularity;
+    popularityElem.classList.add('popularity');
+    popularityElem.style.display = 'none';
+
     card.appendChild(img);
     card.appendChild(titleElem);
     card.appendChild(review);
     card.appendChild(releaseDateElem);
+    card.appendChild(popularityElem);
 
     // $cardContainer.appendChild(card);
     $main_cards.appendChild(card);

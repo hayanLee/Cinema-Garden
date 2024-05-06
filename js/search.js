@@ -18,37 +18,23 @@ export function handleForm(e) {
         }
         else card.style.display = 'none';
     });
-    // console.log(filterResults);
-    // console.log(getFilterResult());
-    // console.log(filterResults);
-    // console.log(filterResults[1]);
-    // console.log(filterResults[0]["id"]); 
-    // console.log(filterResults[2].querySelector('.movieTitle').textContent;
-    // console.log(filterResults[0].querySelector('.popularity').textContent);
-    // console.log(filterResults[0].querySelector('.movieContent').textContent.split("/")[0].slice(0,3).split(".").join(""));
-    // console.log(filterResults[0].querySelector('.movieReleaseDate').textContent.split("-").join(""));
-   
 }
-// function getFilterResult(){
-//     return filterResults;
-// }
-// getFilterResult();
 
 
 
 
 
 //라디오 필터링
-let radioChoice = document.querySelector(".sortForm");
-    function radioClick(event){
+let sortChoice = document.querySelector(".sortForm");
+    function sortClick(event){
         if(event.target.classList.contains("form-check-input")) {
-            filterMovie(event.target.id);
+            sortFilter(event.target.id);
         };
     };
-radioChoice.addEventListener("click", radioClick);
+sortChoice.addEventListener("click", sortClick);
+//라디오그룹1 클릭이벤트
 
-function filterMovie(value){
-    // console.log(value)
+function sortFilter(value){
     switch (value){
         case "RadioDefaultFirst1":
             let tempArr1 = [];
@@ -59,7 +45,6 @@ function filterMovie(value){
             tempArr1.sort((a,b)=>{
                 return b.value - a.value;
             })
-            // console.log(tempArr1);
             let tempResult1 = tempArr1.map((item)=>{
                 return item.movieName;
             });
@@ -67,6 +52,7 @@ function filterMovie(value){
                 return item.parentNode.appendChild(item);
             });
         break;
+        //인기순
 
         case "RadioDefaultFirst2":
             let tempArr2 = [];
@@ -77,7 +63,6 @@ function filterMovie(value){
             tempArr2.sort((a,b)=>{
                 return b.value - a.value;
             });
-            // console.log(tempArr2);
             let tempResult2 = tempArr2.map((item)=>{
                 return item.movieName;
             });
@@ -85,6 +70,7 @@ function filterMovie(value){
                 return item.parentNode.appendChild(item);
             });
         break;
+        //평점순
 
         case "RadioDefaultFirst3":
             let tempArr3 = [];
@@ -95,7 +81,6 @@ function filterMovie(value){
             tempArr3.sort((a,b)=>{
                 return a.value.localeCompare(b.value);
             });
-            // console.log(tempArr3);
             let tempResult3 = tempArr3.map((item)=>{
                 return item.movieName;
             });
@@ -103,5 +88,56 @@ function filterMovie(value){
                 return item.parentNode.appendChild(item);
             });
         break;
+        //제목순
     }
 }
+//라디오그룹1 정렬순 필터링
+
+
+
+
+
+let yearChoice = document.querySelector(".yearForm");
+    function yearClick(event){
+        if(event.target.classList.contains("form-check-input")){
+            yearFilter(event.target.id)
+        }
+    }
+yearChoice.addEventListener("click",yearClick)
+//라디오그룹2 클릭이벤트
+
+function yearFilter(value){
+    switch(value){
+        case "RadioDefaultSecond1" :
+            filterResults.forEach((item)=>{
+                item.style.display = "block"
+            });
+        break;
+        //전체년도
+
+        case "RadioDefaultSecond2" :
+            filterResults.forEach((item)=>{
+                let tempValue = item.querySelector('.movieReleaseDate').textContent.slice(0,4);
+                if(tempValue >= 2024){
+                    item.style.display = "block"
+                }else{
+                    item.style.display = "none"
+                };
+            });
+        break;
+        //2024년 이후
+
+        case "RadioDefaultSecond3" :
+            filterResults.forEach((item)=>{
+                let tempValue = item.querySelector('.movieReleaseDate').textContent.slice(0,4);
+                if(tempValue < 2024){
+                    item.style.display = "block"
+                }else{
+                    item.style.display = "none"
+                }
+            });
+        break;
+        //2024년 이전
+    }
+}
+//라디오그룹2 년도순 필터링!

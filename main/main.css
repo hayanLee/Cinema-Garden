@@ -14,6 +14,7 @@
     display: grid;
     grid-template-columns: 15% auto;
     background-color: pink;
+    margin-bottom: 50px;
 }
 
 /* 필터 */
@@ -84,11 +85,52 @@
 .movieReleaseDate {
     margin-top: auto;
 }
+
+/* 개봉예정 작품 */
 .videos {
-    height: 500px;
+    height: 600px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+    padding: 0 50px;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 50px;
     background-color: green;
+    position: relative;
 }
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.videoCard {
+    min-width: 600px;
+    height: 80%;
+}
+
+/* 배우 */
 .actors {
-    height: 500px;
+    height: 600px;
     background-color: aqua;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    align-items: center;
+    position: relative;
+    padding: 0 50px;
+}
+.actor {
+    min-width: 20%;
+    width: 80%;
+    /* padding: 0 20px; */
+}
+.actorImg {
+    width: 80%;
+}
+.name {
+    font-size: 1.2rem;
 }

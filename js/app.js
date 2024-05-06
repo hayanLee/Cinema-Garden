@@ -7,10 +7,10 @@ const $header = document.querySelector('.header__head > .title');
 
 printMovieCard(); // movie module
 
-document.addEventListener('DOMContentLoaded', () => $input.focus());
-$header.addEventListener('click', () => {
-    window.location.reload();
-});
+// document.addEventListener('DOMContentLoaded', () => $input.focus());
+// $header.addEventListener('click', () => {
+//     window.location.reload();
+// });
 // $uptoBtn.addEventListener('click', () => {
 //     window.scrollTo({
 //         top: 0,
