@@ -1,14 +1,5 @@
-@charset "UTF-8";
-
-@import url("https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
-
-@font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
+@import url("../css/reset.css");
+@import url("../css/style.css");
 
 #sub {
   width: 100%;
@@ -53,15 +44,16 @@ button:active {
 
 #movie-info > .movie-photo {
   width: 400px;
-  height: 500px;
+  height: 600px;
   background-color: #ffefef;
   border-radius: 25px;
   position: absolute;
   top: 80px;
   left: 80px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
+
 .movie-contents {
   width: 700px;
   height: 500px;
@@ -132,4 +124,74 @@ button:active {
 .etc :hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+/* 리뷰영역 css */
+.review-content {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  padding: 50px 0;
+  background-color: #0f1b33;
+}
+
+.review-content > .review-list {
+  width: 50%;
+}
+.review-content > .review-list > * {
+  color: white;
+}
+.review-content > .review-list > .review-inner-wrap {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.review-content > .review-list > .review-inner-wrap > .review-user-text {
+  margin-bottom: 10px;
+}
+
+.review-content > .review-form {
+  width: 30%;
+}
+.review-content > .review-form input,
+.review-content > .review-form textarea {
+  padding: 0;
+  margin: 0;
+  background: #0f1b33;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  min-height: 40px;
+  padding: 0 15px;
+  width: calc(100% - 32px);
+}
+.review-content > .review-form textarea {
+  border-radius: 30px;
+  min-height: 250px;
+  padding: 10px 15px;
+  resize: none;
+}
+.review-content > .review-form > .review-form-item {
+  width: 100%;
+  color: white;
+}
+.review-content > .review-form > .review-form-item > label {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.review-content > .review-form > .review-form-submit {
+  display: block;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  margin-top: 30px;
+  float: right;
 }
