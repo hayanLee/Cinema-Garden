@@ -106,6 +106,9 @@ function yearClick(event) {
 yearChoice.addEventListener('click', yearClick);
 
 function yearFilter(value) {
+    if (filterResults.length === 0) {
+        filterResults.push(...Array.from($main_cards.querySelectorAll('.card')));
+    }
     switch (value) {
         case 'RadioDefaultSecond1':
             filterResults.forEach((item) => {
