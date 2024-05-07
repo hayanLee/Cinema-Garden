@@ -137,37 +137,109 @@ button:active {
   background-color: #0f1b33;
 }
 
-.review-content > .review-list {
-  width: 50%;
+.review-header {
+  font-size: 3rem;
+  text-align: left;
+  background-color: transparent;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 20px 130px;
 }
-.review-content > .review-list > * {
+
+.review-wrapper {
+  border-radius: 30px;
+  width: 700px;
+  height: 600px; 
+  overflow: auto; /* 스크롤 추가 */
+  border: 5px solid white;
+  margin-top: 20px;
+}
+
+.review-content > .review-wrapper > .review-list {
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 350px;
+}
+.review-content > .review-wrapper > .review-list > * {
   color: white;
 }
-.review-content > .review-list > .review-inner-wrap {
+.review-content > .review-wrapper > .review-list > .review-inner-wrap {
   display: block;
-  width: 100%;
-  padding: 15px;
+  width: 640px;
+  height: auto;
+  padding: 20px 15px;
   border: 1px solid white;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-top: 25px;
 }
-.review-content > .review-list > .review-inner-wrap > .review-user-text {
+
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-id {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-text {
+  margin-top: 20px;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-date {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* 수정 삭제 버튼 css */
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-edit {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  cursor: pointer;
+  /* margin: 10px; */
+}
+
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-edit:hover {
+  background-color: #2b33c5;
+  color: #bbbde2;
+}
+
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-delete {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-delete:hover {
+  background-color: #2b33c5;
+  color: #bbbde2;
+}
+
+.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-text {
   margin-bottom: 10px;
 }
 
 .review-content > .review-form {
   width: 30%;
 }
-.review-content > .review-form input,
+
+.review-content > .review-form input, 
 .review-content > .review-form textarea {
   padding: 0;
   margin: 0;
+  font-size: 20px;
   background: #0f1b33;
   color: white;
   border: 1px solid white;
   border-radius: 50px;
   min-height: 40px;
-  padding: 0 15px;
+  padding: 20px 15px;
   width: calc(100% - 32px);
 }
 .review-content > .review-form textarea {
@@ -180,13 +252,16 @@ button:active {
   width: 100%;
   color: white;
 }
+
 .review-content > .review-form > .review-form-item > label {
   display: block;
   width: 100%;
   margin: 20px 0;
+  font-size: 25px;
 }
 .review-content > .review-form > .review-form-submit {
-  display: block;
+  display: flex;
+  font-size: 20px;
   padding: 10px 40px;
   border-radius: 10px;
   background: #656ed3;
@@ -194,4 +269,33 @@ button:active {
   border: 0;
   margin-top: 30px;
   float: right;
+  cursor: pointer;
 }
+
+.review-content > .review-form > .review-form-submit:hover {
+  background-color: #2b33c5;
+  color: #bbbde2;
+}
+
+/* .review-form {
+display: grid;
+}  */
+/* .review-user-text {
+
+}
+
+.review-user-id {
+  margin-bottom: 10px;
+}
+
+.review-user-date {
+  margin-bottom: 10px;
+}
+
+.review-user-edit {
+  margin-right: 10px;
+}
+
+/* .review-user-delete {
+
+} */
