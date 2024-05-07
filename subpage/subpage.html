@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jo`s Cinema Garden</title>
+    <link rel="stylesheet" href="./subpage.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <script type="module" src="../js/Sub.js"></script>
+    <script type="module" src="../js/review.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jo`s Cinema Garden | Detail</title>
-  <link rel="stylesheet" href="./subpage.css" />
-  <link rel="stylesheet"
-    href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+  </head>
+  <body>
+    <header id="sub">
+      <h2 class="title">HCG : Hanjo’s Cinema Garden</h2>
+      <button class="back" onclick="history.back()">뒤로가기</button>
 
-<body>
-  <header id="sub">
-    <h2 class="title">HCG : Hanjo’s Cinema Garden</h2>
-    <button class="back">뒤로가기</button>
-    <!-- 토글버튼 자리 -->
-  </header>
-  <div id="movie-info">
-    <div class="movie-photo"></div>
-    <div class="movie-contents">
-      <h1 class="movie-title">영화 제목</h1>
-      <div class="movie-info2">
-        <p>줄거리</p>
-        <p>평점</p>
-        <p>장르</p>
-      </div>
-      <div class="etc">
-        <button class="like"><i class="fi fi-rr-heart"></i> 추천</button>
+      <!-- 토글버튼 자리 -->
+    </header>
+    <div id="movie-info">
+      <div class="movie-photo"></div>
+      <div class="movie-contents">
+        <h1 class="movie-title"></h1>
+        <h3 class="storyline"></h3>
+        <p class="movie-content"></p>
+        <p class="movie-genre"></p>
+        <p class="release-year"></p>
+        <div class="etc">
+          <button class="like"><i class="fi fi-rr-heart"></i> 추천</button>
+        </div>
       </div>
     </div>
-  </div>
-</body>
 
+    <!-- 댓글창 -->
+    <main class="review-content">
+      <ul class="review-list" id="review-list"></ul>
+      <form class="review-form" id="review-form">
+        <div class="review-form-item review-form-id">
+          <label for="user-id">ID</label>
+          <input type="text" id="user-id" required />
+        </div>
+        <div class="review-form-item review-form-pw">
+          <label for="user-pw">PW</label>
+          <input type="password" id="user-pw" required />
+        </div>
+        <div class="review-form-item review-form-text">
+          <label for="user-text">Review</label>
+          <textarea id="user-text" required></textarea>
+        </div>
+        <button class="review-form-submit">Submit</button>
+      </form>
+    </main>
+  </body>
 </html>
