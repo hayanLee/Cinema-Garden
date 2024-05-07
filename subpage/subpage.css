@@ -1,65 +1,65 @@
-@import url('../css/reset.css');
-@import url('../css/style.css');
+@import url("../css/reset.css");
+@import url("../css/style.css");
 
 #sub {
-    width: 100%;
-    height: 90px;
-    background-color: #f5dad2;
-    position: relative;
-    margin-bottom: 70px;
+  width: 100%;
+  height: 90px;
+  background-color: #f5dad2;
+  position: relative;
+  margin-bottom: 70px;
 }
 
 .title {
-    text-align: center;
-    font-size: 30px;
-    padding-top: 30px;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 30px;
 }
 
 .back {
-    width: 90px;
-    height: 30px;
-    background-color: #ca8787;
-    float: right;
-    border: none;
-    position: absolute;
-    top: 50%;
-    right: 20%;
-    transform: translate(-50%, -50%);
-    color: #f2f2f2;
+  width: 90px;
+  height: 30px;
+  background-color: #ca8787;
+  float: right;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
 }
 
 button:active {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 #movie-info {
-    width: 1400px;
-    height: 720px;
-    background-color: #ffd0d0;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
+  width: 1400px;
+  height: 720px;
+  background-color: #ffd0d0;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #movie-info > .movie-photo {
-    width: 400px;
-    height: 500px;
-    background-color: #ffefef;
-    border-radius: 25px;
-    position: absolute;
-    top: 80px;
-    left: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+  background-color: #ffefef;
+  border-radius: 25px;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .movie-contents {
-    width: 700px;
-    height: 500px;
-    /* background-color: #b3c8cf; */
-    position: absolute;
-    top: 80px;
-    right: 100px;
+  width: 700px;
+  height: 500px;
+  /* background-color: #b3c8cf; */
+  position: absolute;
+  top: 80px;
+  right: 100px;
 }
 
 /* #review {
@@ -79,48 +79,118 @@ button:active {
 } */
 
 .movie-title {
-    font-size: 35px;
-    margin-left: 39%;
-    border-bottom: 1px solid #999;
-    margin-top: 5px;
-    padding: 20px 0;
-    width: 160px;
-    font-family: 'Pretendard-Regular';
-    text-align: center;
+  font-size: 35px;
+  margin-left: 39%;
+  border-bottom: 1px solid #999;
+  margin-top: 5px;
+  padding: 20px 0;
+  width: 160px;
+  font-family: "Pretendard-Regular";
+  text-align: center;
 }
 
 .movie-info2 {
-    margin-left: 35px;
-    margin-top: 38px;
+  margin-left: 35px;
+  margin-top: 38px;
 }
 .movie-info2 > p {
-    line-height: 95px;
-    font-size: 25px;
-    font-family: 'Pretendard-Regular';
+  line-height: 95px;
+  font-size: 25px;
+  font-family: "Pretendard-Regular";
 }
 
 .etc {
-    margin-top: 30px;
-    margin-left: 5%;
+  margin-top: 30px;
+  margin-left: 5%;
 }
 
 .like {
-    border: none;
-    background-color: #ca8787;
-    font-size: 17px;
-    color: #f2f2f2;
-    font-family: 'Pretendard-Regular';
-    border-radius: 10px;
-    width: 120px;
-    height: 45px;
+  border: none;
+  background-color: #ca8787;
+  font-size: 17px;
+  color: #f2f2f2;
+  font-family: "Pretendard-Regular";
+  border-radius: 10px;
+  width: 120px;
+  height: 45px;
 }
 
 .fi fi-rr-heart {
-    margin-left: 10px;
-    font-size: 20px;
+  margin-left: 10px;
+  font-size: 20px;
 }
 
 .etc :hover {
-    cursor: pointer;
-    opacity: 0.7;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* 리뷰영역 css */
+.review-content {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  padding: 50px 0;
+  background-color: #0f1b33;
+}
+
+.review-content > .review-list {
+  width: 50%;
+}
+.review-content > .review-list > * {
+  color: white;
+}
+.review-content > .review-list > .review-inner-wrap {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.review-content > .review-list > .review-inner-wrap > .review-user-text {
+  margin-bottom: 10px;
+}
+
+.review-content > .review-form {
+  width: 30%;
+}
+.review-content > .review-form input,
+.review-content > .review-form textarea {
+  padding: 0;
+  margin: 0;
+  background: #0f1b33;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  min-height: 40px;
+  padding: 0 15px;
+  width: calc(100% - 32px);
+}
+.review-content > .review-form textarea {
+  border-radius: 30px;
+  min-height: 250px;
+  padding: 10px 15px;
+  resize: none;
+}
+.review-content > .review-form > .review-form-item {
+  width: 100%;
+  color: white;
+}
+.review-content > .review-form > .review-form-item > label {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.review-content > .review-form > .review-form-submit {
+  display: block;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  margin-top: 30px;
+  float: right;
 }
