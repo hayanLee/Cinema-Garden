@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+@import url("https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 #sub {
   width: 100%;
   height: 90px;
@@ -49,17 +59,19 @@ button:active {
   position: absolute;
   top: 80px;
   left: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .movie-contents {
   width: 700px;
   height: 500px;
-  background-color: #b3c8cf;
+  /* background-color: #b3c8cf; */
   position: absolute;
   top: 80px;
   right: 100px;
 }
 
-#review {
+/* #review {
   margin: 0 auto;
   width: 1400px;
   height: 500px;
@@ -73,4 +85,51 @@ button:active {
   position: absolute;
   top: 40px;
   left: 40px;
+} */
+
+.movie-title {
+  font-size: 35px;
+  margin-left: 39%;
+  border-bottom: 1px solid #999;
+  margin-top: 5px;
+  padding: 20px 0;
+  width: 160px;
+  font-family: "Pretendard-Regular";
+  text-align: center;
+}
+
+.movie-info2 {
+  margin-left: 35px;
+  margin-top: 38px;
+}
+.movie-info2 > p {
+  line-height: 95px;
+  font-size: 25px;
+  font-family: "Pretendard-Regular";
+}
+
+.etc {
+  margin-top: 30px;
+  margin-left: 5%;
+}
+
+.like {
+  border: none;
+  background-color: #ca8787;
+  font-size: 17px;
+  color: #f2f2f2;
+  font-family: "Pretendard-Regular";
+  border-radius: 10px;
+  width: 120px;
+  height: 45px;
+}
+
+.fi fi-rr-heart {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.etc :hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
