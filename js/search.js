@@ -57,7 +57,7 @@ function sortFilter(value){
         case "RadioDefaultFirst2":
             let tempArr2 = [];
             filterResults.forEach((item)=>{
-                let tempValue = item.querySelector('.movieContent').textContent.split("/")[0].slice(0,3).split(".").join("");
+                let tempValue = item.querySelector('.review').textContent.replace("⭐️","").trim().split("/")[0].slice(0,3).split(".").join("");
                 tempArr2.push({value: tempValue, movieName: item});
             });
             tempArr2.sort((a,b)=>{
