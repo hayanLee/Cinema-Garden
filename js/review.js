@@ -1,3 +1,11 @@
+let query = window.location.search;
+let param = new URLSearchParams(query);
+let movieId = param.get('id');
+
+// console.log(id);    // 693134
+
+
+
 // 리뷰 form 을 변수에 저장
 const reviewForm = document.getElementById('review-form');
 // 리뷰 list 을 변수에 저장
@@ -62,7 +70,7 @@ document.addEventListener('click', (e) => {
 
 // 로컬 스토리지에서 리뷰 배열 가져오기
 function getReviews() {
-    let reviews = localStorage.getItem('reviews');
+    let reviews = localStorage.getItem(`${movieId}`);
 
     if (reviews) {
         return JSON.parse(reviews);
@@ -73,7 +81,7 @@ function getReviews() {
 
 // 로컬 스토리지에 리뷰 배열 저장하기
 function saveReviews(reviews) {
-    localStorage.setItem('reviews', JSON.stringify(reviews));
+    localStorage.setItem(`${movieId}`, JSON.stringify(reviews));              //693134
 }
 
 // 리뷰 목록 불러오기
