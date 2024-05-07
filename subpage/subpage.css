@@ -13,13 +13,14 @@
   );
   transition: 0.5s;
   position: relative;
-  margin-bottom: 6.5rem;
+  margin-bottom: 6rem;
 }
 
 .title {
   font-size: 24px;
   color: var(--text);
   margin-left: 1em;
+  padding: 1rem;
 }
 
 .back {
@@ -39,14 +40,10 @@ button:active {
   opacity: 0.7;
 }
 
-button:hover {
-  background-color: transparent;
-}
-
 #movie-info {
   width: 1400px;
   height: 720px;
-  background-color: var(--main-color);
+  background-color: #0f1b33;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -90,22 +87,21 @@ button:hover {
 } */
 
 .movie-title {
-  font-size: 35px;
+  font-size: 25px;
   margin-top: 5px;
   padding: 20px 0;
   color: var(--text);
 }
 
-.movie-info2 {
+.movie-contents {
   margin-top: 25px;
   color: var(--text);
 }
-.movie-info2 > h2 {
-  line-height: 95px;
+#movie-info > h2 {
   font-size: 25px;
 }
 
-.movie-info2 > p {
+#movie-info > p {
   line-height: 1.5rem;
 }
 
@@ -131,4 +127,74 @@ button:hover {
 .etc :hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+/* 리뷰영역 css */
+.review-content {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  padding: 50px 0;
+  background-color: #0f1b33;
+}
+
+.review-content > .review-list {
+  width: 50%;
+}
+.review-content > .review-list > * {
+  color: white;
+}
+.review-content > .review-list > .review-inner-wrap {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.review-content > .review-list > .review-inner-wrap > .review-user-text {
+  margin-bottom: 10px;
+}
+
+.review-content > .review-form {
+  width: 30%;
+}
+.review-content > .review-form input,
+.review-content > .review-form textarea {
+  padding: 0;
+  margin: 0;
+  background: #0f1b33;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  min-height: 40px;
+  padding: 0 15px;
+  width: calc(100% - 32px);
+}
+.review-content > .review-form textarea {
+  border-radius: 30px;
+  min-height: 250px;
+  padding: 10px 15px;
+  resize: none;
+}
+.review-content > .review-form > .review-form-item {
+  width: 100%;
+  color: white;
+}
+.review-content > .review-form > .review-form-item > label {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.review-content > .review-form > .review-form-submit {
+  display: block;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  margin-top: 30px;
+  float: right;
 }
