@@ -1,24 +1,32 @@
 @import url("../css/reset.css");
 @import url("../css/style.css");
+@import url("../css/header.css");
 
 #sub {
   width: 100%;
-  height: 90px;
-  background-color: #f5dad2;
+  height: 55px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  transition: 0.5s;
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 6rem;
 }
 
 .title {
-  text-align: center;
-  font-size: 30px;
-  padding-top: 30px;
+  font-size: 24px;
+  color: var(--text);
+  margin-left: 1em;
+  padding: 1rem;
 }
 
 .back {
-  width: 90px;
+  width: 60px;
   height: 30px;
-  background-color: #ca8787;
+  background-color: var(--light-text);
   float: right;
   border: none;
   position: absolute;
@@ -35,7 +43,7 @@ button:active {
 #movie-info {
   width: 1400px;
   height: 720px;
-  background-color: #ffd0d0;
+  background-color: #0f1b33;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -44,16 +52,15 @@ button:active {
 
 #movie-info > .movie-photo {
   width: 400px;
-  height: 600px;
-  background-color: #ffefef;
+  height: 500px;
+  background-color: var(--white);
   border-radius: 25px;
   position: absolute;
   top: 80px;
   left: 80px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
-
 .movie-contents {
   width: 700px;
   height: 500px;
@@ -80,44 +87,40 @@ button:active {
 } */
 
 .movie-title {
-  font-size: 35px;
-  margin-left: 39%;
-  border-bottom: 1px solid #999;
+  font-size: 25px;
   margin-top: 5px;
   padding: 20px 0;
-  width: 160px;
-  font-family: "Pretendard-Regular";
-  text-align: center;
+  color: var(--text);
 }
 
-.movie-info2 {
-  margin-left: 35px;
-  margin-top: 38px;
+.movie-contents {
+  margin-top: 25px;
+  color: var(--text);
 }
-.movie-info2 > p {
-  line-height: 95px;
+#movie-info > h2 {
   font-size: 25px;
-  font-family: "Pretendard-Regular";
+}
+
+#movie-info > p {
+  line-height: 1.5rem;
 }
 
 .etc {
   margin-top: 30px;
-  margin-left: 5%;
 }
 
 .like {
   border: none;
-  background-color: #ca8787;
+  background-color: var(--light-text);
   font-size: 17px;
   color: #f2f2f2;
-  font-family: "Pretendard-Regular";
   border-radius: 10px;
-  width: 120px;
+  width: 110px;
   height: 45px;
 }
 
 .fi fi-rr-heart {
-  margin-left: 10px;
+  margin-left: 5px;
   font-size: 20px;
 }
 
