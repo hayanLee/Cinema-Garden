@@ -2,6 +2,7 @@
 @import url('../Darkmode/darkmode.css');
 @import url('../css/style.css');
 @import url('../css/header.css');
+@import url('../css/darkmode.css');
 @import url('../css/footer.css');
 .main__container {
     height: 1000px;

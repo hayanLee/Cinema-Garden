@@ -5,11 +5,11 @@ const $input = document.querySelector('.searchForm__input');
 const $logo = document.querySelector('.header__head > .title');
 const $header = document.querySelector('.header__head');
 const $uptoBtn = document.querySelector('.uptoBtn');
-// const $uptoBtn = document.querySelector('.uptoBtn');
 
 printMovieCard(); // movie module
 
-// document.addEventListener('DOMContentLoaded', () => $input.focus());
+document.addEventListener('DOMContentLoaded', () => $input.focus());
+
 $logo.addEventListener('click', () => {
     window.location.reload();
 });

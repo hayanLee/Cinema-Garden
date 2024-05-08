@@ -11,11 +11,11 @@ const options = {
 
 // 개봉예정 영화 영상
 async function getUpcommingVideoIDs() {
-    // const response = await fetch(
-    //     `https://api.themoviedb.org/3/movie/upcoming?language=ko&page=1`,
-    //     options
-    // );
-    const response = await fetch('../assets/upcomming.json');
+    const response = await fetch(
+        `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1`,
+        options
+    );
+    // const response = await fetch('../assets/upcomming.json');
     const { results } = await response.json();
     const videoIDs = results.map((video) => video.id);
     return videoIDs;

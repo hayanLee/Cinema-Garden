@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jo`s Cinema Garden</title>
-    <link rel="stylesheet" href="./subpage.css" />
-    <link rel="stylesheet" href="./reset.css" />
-    <script type="module" src="../js/Sub.js"></script>
-    <script type="module" src="../js/review.js"></script>
-    <script
-      src="https://kit.fontawesome.com/eacc55a6d2.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header id="sub">
-      <h2 class="title">Jo's Cinema Garden</h2>
-      <button class="back" onclick="history.back()">
-        <i class="fa-solid fa-arrow-left"></i>
-      </button>
-      <div class="header__main swiper-container">
-        <div class="swiper-wrapper"></div>
-      </div>
-      <!-- 토글버튼 자리 -->
-    </header>
-    <div id="movie-info">
-      <div class="movie-photo"></div>
-      <div class="movie-contents">
-        <h1 class="movie-title">제목</h1>
-        <h3 class="storyline">개요</h3>
-        <h2 class="movie-content">평점</h2>
-        <h2 class="movie-genre">장르</h2>
-        <h2 class="release-year">개봉년도</h2>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jo`s Cinema Garden | Movie</title>
+  <link rel="stylesheet" href="../css/subpage.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <script type="module" src="../js/Sub.js"></script>
+  <script type="module" src="../js/review.js"></script>
+  <script src="https://kit.fontawesome.com/eacc55a6d2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="sub">
+    <h2 class="title">Jo's Cinema Garden</h2>
+    <button class="back" onclick="history.back()">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <div class="header__main swiper-container">
+      <div class="swiper-wrapper"></div>
     </div>
+    <!-- 토글버튼 자리 -->
+  </header>
+  <div id="movie-info">
+    <div class="movie-photo"></div>
+    <div class="movie-contents">
+      <h1 class="movie-title">제목</h1>
+      <h3 class="storyline">개요</h3>
+      <h2 class="movie-content">평점</h2>
+      <h2 class="movie-genre">장르</h2>
+      <h2 class="release-year">개봉년도</h2>
+    </div>
+  </div>
   </div>
 
   <h3 class="review-header">REVIEWS</h3>
-  <!-- 댓글창 -->  
+  <!-- 댓글창 -->
   <main class="review-content">
     <div class="review-wrapper">
       <ul class="review-list" id="review-list"></ul>
-    </div> 
+    </div>
     <form class="review-form" id="review-form">
       <div class="review-form-item review-form-id">
         <label for="user-id">ID</label>
