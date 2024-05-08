@@ -21,10 +21,13 @@ export function handleForm(e) {
 }
 
 //라디오 필터링
+
+
 let sortChoice = document.querySelector('.sortForm');
 function sortClick(event) {
     if (event.target.classList.contains('form-check-input')) {
         sortFilter(event.target.id);
+
     }
 }
 sortChoice.addEventListener('click', sortClick);
@@ -103,6 +106,9 @@ function yearClick(event) {
 yearChoice.addEventListener('click', yearClick);
 
 function yearFilter(value) {
+    if (filterResults.length === 0) {
+        filterResults.push(...Array.from($main_cards.querySelectorAll('.card')));
+    }
     switch (value) {
         case 'RadioDefaultSecond1':
             filterResults.forEach((item) => {
