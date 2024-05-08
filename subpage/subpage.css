@@ -60,15 +60,14 @@ button:active {
 
 #movie-info > .movie-photo {
   width: 400px;
-  height: 500px;
+  height: 600px;
   background-color: var(--white);
   border-radius: 25px;
   position: absolute;
-  top: 6.5rem;
+  top: 4rem;
   left: 100px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  object-fit: cover;
 }
 .movie-contents {
   width: 700px;
