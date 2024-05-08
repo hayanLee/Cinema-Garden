@@ -3,7 +3,7 @@ import { getTopFiveMovie } from '../js/movie.js';
 const $swiper = new Swiper('.swiper-container', {
     // direction: 'vertical',
     loop: true,
-    speed: 200,
+    speed: 300,
     pagination: {
         el: '.swiper-pagination',
         // type: 'bullets',
@@ -11,7 +11,7 @@ const $swiper = new Swiper('.swiper-container', {
     disableOnInteraction: false,
     allowTouchMove: false,
     autoplay: {
-        delay: 2000,
+        delay: 3000,
     },
 });
 

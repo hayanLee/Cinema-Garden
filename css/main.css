@@ -1,7 +1,7 @@
 @import url('../css/reset.css');
 @import url('../css/style.css');
 @import url('../css/header.css');
-
+@import url('../css/footer.css');
 .main__container {
     height: 1000px;
     margin: 0 50px;
