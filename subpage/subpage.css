@@ -64,49 +64,48 @@ button:active {
 .movie-contents {
   width: 700px;
   height: 500px;
-  /* background-color: #b3c8cf; */
   position: absolute;
-  top: 80px;
+  top: 70px;
   right: 100px;
 }
 
-/* #review {
-  margin: 0 auto;
-  width: 1400px;
-  height: 500px;
-  background-color: #eef5ff;
-  margin-top: 80px;
-  position: relative;
+.movie-contents {
+  margin-top: 2rem;
+  padding: 20px 0;
+  color: var(--white);
 }
-
-.review-title {
-  font-size: 25px;
-  position: absolute;
-  top: 40px;
-  left: 40px;
-} */
 
 .movie-title {
-  font-size: 25px;
-  margin-top: 5px;
-  padding: 20px 0;
-  color: var(--text);
+  font-size: 2.5rem;
 }
 
-.movie-contents {
-  margin-top: 25px;
-  color: var(--text);
-}
-#movie-info > h2 {
-  font-size: 25px;
+.storyline {
+  font-size: 23px;
+  margin-top: 2.7rem;
 }
 
-#movie-info > p {
+.movie-contents > p {
+  margin-top: 2.4rem;
   line-height: 1.5rem;
 }
 
+.movie-content {
+  font-size: 23px;
+  margin-top: 1rem;
+}
+
+.movie-genre {
+  font-size: 23px;
+  margin-top: 1.4rem;
+}
+
+.release-year {
+  font-size: 23px;
+  margin-top: 1.4rem;
+}
+
 .etc {
-  margin-top: 30px;
+  margin-top: 2.7rem;
 }
 
 .like {
@@ -152,7 +151,7 @@ button:active {
 .review-wrapper {
   border-radius: 30px;
   width: 700px;
-  height: 600px; 
+  height: 600px;
   overflow: auto; /* 스크롤 추가 */
   border: 5px solid white;
   margin-top: 20px;
@@ -176,25 +175,40 @@ button:active {
   margin-top: 25px;
 }
 
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-id {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-id {
   font-weight: bold;
   font-size: 20px;
 }
 
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-text {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-text {
   margin-top: 20px;
   font-size: 20px;
   word-wrap: break-word;
 }
 
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-date {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-date {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-
 /* 수정 삭제 버튼 css */
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-edit {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-edit {
   padding: 5px 10px;
   border-radius: 10px;
   background: #656ed3;
@@ -204,12 +218,20 @@ button:active {
   /* margin: 10px; */
 }
 
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-edit:hover {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-edit:hover {
   background-color: #2b33c5;
   color: #bbbde2;
 }
 
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-delete {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-delete {
   padding: 5px 10px;
   border-radius: 10px;
   background: #656ed3;
@@ -219,12 +241,20 @@ button:active {
   margin: 10px;
 }
 
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-delete:hover {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-delete:hover {
   background-color: #2b33c5;
   color: #bbbde2;
 }
 
-.review-content > .review-wrapper > .review-list > .review-inner-wrap > .review-user-text {
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-text {
   margin-bottom: 10px;
 }
 
@@ -232,7 +262,7 @@ button:active {
   width: 30%;
 }
 
-.review-content > .review-form input, 
+.review-content > .review-form input,
 .review-content > .review-form textarea {
   padding: 0;
   margin: 0;
