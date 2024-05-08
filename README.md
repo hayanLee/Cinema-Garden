@@ -2,7 +2,7 @@
 
 ## 1. 메인 페이지
 
-    top 5 영화로 header 캐러셀 적용
+    - top 5 영화로 header 캐러셀 적용
     - 상단으로 이동 버튼
     - 검색 기능
         - submit으로 enter / click 적용
