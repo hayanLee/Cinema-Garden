@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../Darkmode/darkmode.css">
     <!-- swiper CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- icon -->
     <script src="https://kit.fontawesome.com/574102e2c7.js" crossorigin="anonymous"></script>
-
+    
     <!-- src -->
     <script type="module" src="../header/header.js"></script>
+    <script type="module" src="../Darkmode/toggle.js"></script>
     <script type="module" src="../js/app.js"></script>
     <script type="module" src="../js/upcomingMovie.js"></script>
 </head>
@@ -28,7 +30,9 @@
                 <input class="searchForm__input" type="text" placeholder="What do you want to watch?">
                 <div class="searchForm__icon"><img src="../assets/Search.png" alt="돋보기아이콘"></div>
             </form>
-            <button class="darkmode">☀️</button>
+            <button id="darkModeToggle">
+                <span class="icon"></span>
+            </button>
         </section>
         <div class="header__main swiper-container">
             <div class="swiper-wrapper"></div>

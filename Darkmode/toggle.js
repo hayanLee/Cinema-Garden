@@ -6,9 +6,9 @@ const icon = document.querySelector('.icon');
 
 function toggleDarkMode() {
   body.classList.toggle('dark-mode');
-  box.classList.toggle('dark-mode');
-  darkModeToggle.classList.toggle('toggled');
-  icon.classList.toggle('light-mode');
+  // box.classList.toggle('dark-mode');
+  // darkModeToggle.classList.toggle('toggled');
+  // icon.classList.toggle('light-mode');
   icon.classList.toggle('dark-mode');
 
   // 클릭시 모드 이름 적용
