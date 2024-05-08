@@ -18,9 +18,17 @@
 
 .title {
   font-size: 24px;
-  color: var(--text);
+  color: var(--main-color);
   margin-left: 11rem;
   padding: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--accent-color);
 }
 
 .back {
@@ -57,9 +65,10 @@ button:active {
   border-radius: 25px;
   position: absolute;
   top: 6.5rem;
-  left: 80px;
+  left: 100px;
   background-size: contain;
   background-repeat: no-repeat;
+  object-fit: cover;
 }
 .movie-contents {
   width: 700px;
@@ -88,18 +97,24 @@ button:active {
 
 .movie-content {
   font-size: 23px;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  color: var(--accent-color);
 }
 
 .movie-genre {
   font-size: 23px;
-  margin-top: 1.4rem;
+  margin-top: 7rem;
 }
 
 .release-year {
   font-size: 23px;
-  margin-top: 1.4rem;
+  margin-top: 4rem;
 }
+
+/* .movie-genre,
+.release-year {
+  margin-top: 2rem;
+} */
 
 /* 리뷰영역 css */
 .review-content {
