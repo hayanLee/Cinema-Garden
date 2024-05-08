@@ -2,7 +2,7 @@
 @import url('../css/style.css');
 
 :root {
-    --footer-color: #697077;
+    --footer-color: rgb(0, 0, 0);
     --white: #fff;
 }
 .footer,
@@ -11,6 +11,7 @@
     color: var(--white);
 }
 .footer {
+    margin-top: 50px;
     height: 80px;
     width: 100%;
     display: flex;
@@ -18,8 +19,9 @@
     justify-content: center;
     align-items: center;
     background-color: var(--footer-color);
+    border-top: 1px solid white;
 }
-
+/* .footer h3{color: #fff;} */
 .links {
     margin-top: 24px;
 }
