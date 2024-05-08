@@ -6,8 +6,9 @@ const $swiper = new Swiper('.swiper-container', {
     speed: 200,
     pagination: {
         el: '.swiper-pagination',
-        type: 'bullets',
+        // type: 'bullets',
     },
+    disableOnInteraction: false,
     allowTouchMove: false,
     autoplay: {
         delay: 2000,
