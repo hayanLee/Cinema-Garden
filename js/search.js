@@ -22,12 +22,10 @@ export function handleForm(e) {
 
 //라디오 필터링
 
-
 let sortChoice = document.querySelector('.sortForm');
 function sortClick(event) {
     if (event.target.classList.contains('form-check-input')) {
         sortFilter(event.target.id);
-
     }
 }
 sortChoice.addEventListener('click', sortClick);
@@ -49,7 +47,6 @@ function compareMovie(compareTarget) {
             return 0;
         } else {
             // 오름차순(인기, 이름)
-            // console.log(compareTarget + '1');
             if (targetA < targetB) return -1;
             if (targetA > targetB) return 1;
             return 0;
@@ -64,9 +61,6 @@ function sortFilter(value) {
         //인기순
         case 'RadioDefaultFirst1':
             let tempArr1 = compareMovie('.popularity');
-            document.querySelectorAll('.card').forEach((card) => {
-                card.parentNode.removeChild(card);
-            });
             tempArr1.forEach((card) => {
                 $main_cards.appendChild(card);
             });
@@ -75,9 +69,6 @@ function sortFilter(value) {
         //평점순
         case 'RadioDefaultFirst2':
             let tempArr2 = compareMovie('.review');
-            document.querySelectorAll('.card').forEach((card) => {
-                card.parentNode.removeChild(card);
-            });
             tempArr2.forEach((card) => {
                 $main_cards.appendChild(card);
             });
@@ -86,9 +77,6 @@ function sortFilter(value) {
         //제목순
         case 'RadioDefaultFirst3':
             let tempArr3 = compareMovie('.movieTitle');
-            document.querySelectorAll('.card').forEach((card) => {
-                card.parentNode.removeChild(card);
-            });
             tempArr3.forEach((card) => {
                 $main_cards.appendChild(card);
             });
