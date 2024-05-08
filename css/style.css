@@ -37,3 +37,16 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent-color);
+}
