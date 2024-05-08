@@ -20,11 +20,17 @@ window.onload = function () {
 reviewForm.onsubmit = function (e) {
     // 새로고침 막기위해 이벤트 취소
     e.preventDefault();
-    
+
     // 입력된 이름과 리뷰 내용 가져오기
     let userId = this['user-id'].value;
     let userPw = this['user-pw'].value;
     let userText = this['user-text'].value;
+
+    // 비밀번호 4글자이상되도록 alert
+    if (userPw.length < 4) {
+        alert("비밀번호는 4글자 이상이어야 합니다.");
+        return; //제출을 막고 함수 종료
+    }
     
     // 리뷰 객체 생성
     let newReview = {
@@ -32,7 +38,7 @@ reviewForm.onsubmit = function (e) {
         pw: userPw,
         review: userText,
         date: new Date(),
-    };
+    };  
     
     // 기존 리뷰 배열 가져오기
     let reviews = getReviews();
@@ -45,10 +51,21 @@ reviewForm.onsubmit = function (e) {
     
     // 리뷰 목록 다시 불러오기
     loadReviews();
+
+
     
     // 폼 초기화
     reviewForm.reset();
+
 };
+
+// 엔터 누르면 제출
+reviewForm.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // 엔터키의 기본 동작 방지
+      this.onsubmit(e); // 폼 제출 함수 호출
+    }
+  });
 
 // 수정, 삭제 버튼 눌렀을 때
 document.addEventListener('click', (e) => {
@@ -100,8 +117,8 @@ function loadReviews() {
         let listItem = document.createElement('li');
         listItem.setAttribute('data-id', i);
         listItem.className = 'review-inner-wrap';
-        listItem.innerHTML = '<p class="review-user-text">' + review.review + '</p><p class="review-user-id">' + review.user + '</p><p class="review-user-date">' + new Date(review.date).toLocaleString() + '</p>';
-        listItem.innerHTML += '<a class="review-user-edit">수정</a><a class="review-user-delete">삭제</a>';
+        listItem.innerHTML = '<p class="review-user-id">' + review.user + '</p><p class="review-user-text">' + review.review + '</p><p class="review-user-date">' + new Date(review.date).toLocaleString() + '</p>';
+        listItem.innerHTML += '<a class="review-user-edit">Edit</a><a class="review-user-delete">Delete</a>';
 
         reviewList.appendChild(listItem);
     }
