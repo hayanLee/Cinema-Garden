@@ -1,0 +1,35 @@
+@import url('../css/reset.css');
+@import url('../css/style.css');
+
+:root {
+    --footer-color: rgb(0, 0, 0);
+    --white: #fff;
+}
+.footer,
+.links a {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+.footer {
+    margin-top: 50px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--footer-color);
+    border-top: 1px solid white;
+    padding-top: 20px;
+}
+/* .footer h3{color: #fff;} */
+.links {
+    margin-top: 24px;
+}
+
+.links a {
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+}

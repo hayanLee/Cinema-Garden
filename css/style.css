@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root,
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: rgb(238, 174, 202);
+    --accent-color: #ffc55a;
+    --text: #00215e;
+    --light-text: #2c4e80;
+    --white: #fff;
+    --border-color: #d1d5db;
+}
+body {
+    background-color: black;
+}
+.uptoBtn {
+    color: var(--main-color);
+    position: fixed;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    right: 2%;
+    bottom: 5%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+.uptoBtn:hover {
+    color: var(--light-text);
+}
+.uptoBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent-color);
+}

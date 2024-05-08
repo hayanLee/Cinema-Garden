@@ -1,0 +1,321 @@
+@import url("../css/reset.css");
+@import url("../css/style.css");
+@import url("../css/header.css");
+
+#sub {
+  width: 100%;
+  height: 55px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  transition: 0.5s;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.title {
+  font-size: 24px;
+  color: var(--main-color);
+  margin-left: 11rem;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--accent-color);
+}
+
+.back {
+  width: 60px;
+  height: 30px;
+  background-color: var(--light-text);
+  float: right;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+}
+
+button:active {
+  opacity: 0.7;
+}
+
+#movie-info {
+  width: 1400px;
+  height: 720px;
+  background-color: #0f1b33;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#movie-info > .movie-photo {
+  width: 400px;
+  height: 600px;
+  background-color: var(--white);
+  border-radius: 25px;
+  position: absolute;
+  top: 4rem;
+  left: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.movie-contents {
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 3rem;
+  right: 100px;
+}
+
+.movie-contents {
+  margin-top: 2rem;
+  padding: 20px 0;
+  color: var(--white);
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+
+.storyline {
+  font-size: 23px;
+  margin-top: 2.7rem;
+  line-height: 1.5rem;
+}
+
+.movie-content {
+  font-size: 23px;
+  margin-top: 2rem;
+  color: var(--accent-color);
+}
+
+.movie-genre {
+  font-size: 23px;
+  margin-top: 7rem;
+}
+
+.release-year {
+  font-size: 23px;
+  margin-top: 4rem;
+}
+
+/* .movie-genre,
+.release-year {
+  margin-top: 2rem;
+} */
+
+/* 리뷰영역 css */
+.review-content {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  padding: 50px 0;
+  background-color: #0f1b33;
+}
+
+.review-header {
+  font-size: 3rem;
+  text-align: left;
+  background-color: transparent;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 20px 130px;
+}
+
+.review-wrapper {
+  border-radius: 30px;
+  width: 700px;
+  height: 600px;
+  overflow: auto; /* 스크롤 추가 */
+  border: 5px solid white;
+  margin-top: 20px;
+}
+
+.review-content > .review-wrapper > .review-list {
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 350px;
+}
+.review-content > .review-wrapper > .review-list > * {
+  color: white;
+}
+.review-content > .review-wrapper > .review-list > .review-inner-wrap {
+  display: block;
+  width: 640px;
+  height: auto;
+  padding: 20px 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-id {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-text {
+  margin-top: 20px;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-date {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 수정 삭제 버튼 css */
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-edit {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  cursor: pointer;
+  /* margin: 10px; */
+}
+
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-edit:hover {
+  background-color: #2b33c5;
+  color: #bbbde2;
+}
+
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-delete {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-delete:hover {
+  background-color: #2b33c5;
+  color: #bbbde2;
+}
+
+.review-content
+  > .review-wrapper
+  > .review-list
+  > .review-inner-wrap
+  > .review-user-text {
+  margin-bottom: 10px;
+}
+
+.review-content > .review-form {
+  width: 30%;
+}
+
+.review-content > .review-form input,
+.review-content > .review-form textarea {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  background: #0f1b33;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  min-height: 40px;
+  padding: 20px 15px;
+  width: calc(100% - 32px);
+}
+.review-content > .review-form textarea {
+  border-radius: 30px;
+  min-height: 250px;
+  padding: 10px 15px;
+  resize: none;
+}
+.review-content > .review-form > .review-form-item {
+  width: 100%;
+  color: white;
+}
+
+.review-content > .review-form > .review-form-item > label {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 25px;
+}
+.review-content > .review-form > .review-form-submit {
+  display: flex;
+  font-size: 20px;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background: #656ed3;
+  color: #afb3ff;
+  border: 0;
+  margin-top: 30px;
+  float: right;
+  cursor: pointer;
+}
+
+.review-content > .review-form > .review-form-submit:hover {
+  background-color: #2b33c5;
+  color: #bbbde2;
+}
+
+/* .review-form {
+display: grid;
+}  */
+/* .review-user-text {
+
+}
+
+.review-user-id {
+  margin-bottom: 10px;
+}
+
+.review-user-date {
+  margin-bottom: 10px;
+}
+
+.review-user-edit {
+  margin-right: 10px;
+}
+
+/* .review-user-delete {
+
+} */
