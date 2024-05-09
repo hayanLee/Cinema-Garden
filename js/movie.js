@@ -103,5 +103,5 @@ const createMovieCard = ({ imgSrc, title, content, id, releaseDate, popularity }
 
 const clickCard = (e) => {
     //카드 이벤트
-    location.href = `../subpage/subpage.html?id=${e.currentTarget.id}`;
+    location.href = `/subpage.html?id=${e.currentTarget.id}`;
 };
